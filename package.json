@@ -29,13 +29,14 @@
   },
   "homepage": "https://github.com/Jabernathy88/warner-abernathy#readme",
   "dependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "braces": "3.0.2",
     "express": "4.17.1",
     "mongodb": "3.2.7",
     "mongoose": "5.7.5"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.7.0",
     "nodemon": "1.19.4"
   }
 }
