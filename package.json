@@ -1,0 +1,29 @@
+{
+  "name": "warner-abernathy",
+  "version": "1.0.0",
+  "description": "Code challenge on Sunday, Oct. 20, 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jabernathy88/warner-abernathy.git"
+  },
+  "keywords": [
+    "React",
+    "Express",
+    "API"
+  ],
+  "author": "Jeremy Abernathay <j.e.abernathy@gmail.com> (ghostmapmedia.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jabernathy88/warner-abernathy/issues"
+  },
+  "homepage": "https://github.com/Jabernathy88/warner-abernathy#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "mongodb": "3.2.7",
+    "mongoose": "5.7.5"
+  }
+}
