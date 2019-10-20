@@ -32,6 +32,8 @@
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.7.0",
     "braces": "3.0.2",
+    "concurrently": "5.0.0",
+    "dotenv": "8.2.0",
     "express": "4.17.1",
     "mongodb": "3.2.7",
     "mongoose": "5.7.5"
