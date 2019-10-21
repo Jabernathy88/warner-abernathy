@@ -11,9 +11,9 @@ app.use(cors());
 // React as view engine
 const serveStatic = require("serve-static")
 const path = require('path');
-app.use(serveStatic(path.join(__dirname, '../client/dist')))
+app.use(serveStatic(path.join(__dirname, '../client/build')))
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '../client/dist/index.html')
+  res.sendFile(__dirname + '../client/build/index.html')
 })
 
 // api port listener
