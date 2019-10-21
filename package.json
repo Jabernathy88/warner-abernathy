@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npx babel-node api/server.js --exec\" \"cd client && npm start\" ",
-    "heroku-postbuild": "npm install && cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm run build",
     "start": "npx babel-node api/server.js"
   },
   "repository": {

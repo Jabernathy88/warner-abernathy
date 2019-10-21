@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 app.use(cors());
 
 // React as view engine
-app.use(express.static(__dirname + '/client/build/'))
+app.use(express.static(__dirname + '../client/build/'))
 
 // api port listener
 const port = process.env.PORT || process.env.API_PORT
@@ -19,7 +19,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req,res) => {
-  res.sendFile(__dirname + '/client/build/index.html')
+  res.sendFile(__dirname + '../client/build/index.html')
 })
 
 app.get('/api', (req, res) => {
