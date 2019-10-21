@@ -5,7 +5,7 @@ const TitlesList = (props) => {
 
   return (
     <div className="posts-list-current-user">
-      {titles && titles.map(title => (
+      {titles && titles.length >= 1 && titles.map(title => (
         <div key={title.id} className="border my-1 p-2">
           <div><small>Debut: {title.ReleaseYear}</small></div>
           <h5><strong>{title.TitleName}</strong></h5>
