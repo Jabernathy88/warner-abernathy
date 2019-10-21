@@ -22,11 +22,7 @@ router.get('/', async (req, res) => {
   } catch (error) {
     console.log(error)
     res.sendStatus(500) // error response
-
-  } finally {
-    client.close();
   }
-
 })
 
 module.exports = router
