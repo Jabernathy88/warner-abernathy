@@ -9,9 +9,9 @@ app.use(bodyParser.json())
 app.use(cors());
 
 // React as view engine
-app.use(express.static(__dirname + '/client/build/'))
-app.get('/', (req,res) => {
-    res.sendFile(__dirname + '/client/build/index.html')
+app.use(express.static(__dirname + '../client/build/'))
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '../client/build/index.html')
 })
 
 // api port listener
