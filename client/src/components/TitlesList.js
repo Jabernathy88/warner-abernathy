@@ -12,7 +12,7 @@ const TitlesList = (props) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
 export default TitlesList
