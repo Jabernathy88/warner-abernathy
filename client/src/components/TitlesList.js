@@ -1,10 +1,16 @@
 import React from 'react'
 
-const TitlesList = () => {
+const TitlesList = (props) => {
+  const { titles } = props
+
   return (
     <div className="posts-list-current-user">
-      <h5>Hello from TitlesList</h5>
-      
+      {titles && titles.map(title => (
+        <div key={title.id} className="border my-1 p-2">
+          <div><small>Debut: {title.ReleaseYear}</small></div>
+          <h5><strong>{title.TitleName}</strong></h5>
+        </div>
+      ))}
     </div>
   );
 };
