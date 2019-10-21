@@ -4,7 +4,7 @@ import { MongoClient } from 'mongodb'
 
 // DB connection. Sorry: I would normally separate these concerns more
 const client = new MongoClient(
-  process.env.REMOTE_DB_URI, // app secret
+  process.env.REMOTE_DB_URI, // app secret 
   { useNewUrlParser: true }
 )
 
