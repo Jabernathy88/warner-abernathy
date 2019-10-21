@@ -27,10 +27,8 @@ class TitlesListContainer extends Component {
   handleInputChange(event) {
     // let currentList = []
     // let newList = []
-
     // if (e.target.value !== "") {
     //   currentList = this.state.titles
-
     //   newList = currentList.filter(item => {
     //     const lc = item.toLowerCase();
     //     const filter = e.target.value.toLowerCase();
@@ -39,7 +37,6 @@ class TitlesListContainer extends Component {
     // } else {
     //   newList = this.state.titles;
     // }
-
     // this.setState({
     //   titles: newList
     // });

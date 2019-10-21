@@ -10,16 +10,14 @@ app.use(cors());
 
 // React as view engine
 const path = require("path")
-
 app.use(express.static(path.join(__dirname, '../client/build/')))
 
-// api port listener
-const port = process.env.PORT || process.env.API_PORT
-
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/'))
 })
 
+// api port listener
+const port = process.env.PORT || process.env.API_PORT
 app.listen(port, () => {
   console.log('Express API server listening on Port:', port)
 })
