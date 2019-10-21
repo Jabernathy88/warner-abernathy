@@ -1,38 +1,12 @@
 import 'dotenv/config'
-import express from 'express'
+import express from 'express' // babel configuration enables ES6 'import' syntax
 import bodyParser from 'body-parser'
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+import cors from 'cors'
 
 // initialize app & modules
 const app = express()
 app.use(bodyParser.json())
-
-// mongo connection
-const client = new MongoClient(process.env.REMOTE_DB_URI, { useNewUrlParser: true })
-
-const findDocuments = function(db, callback) {
-  // Get the documents collection
-  const collection = db.collection('Titles');
-  // Find some documents
-  collection.find({}).toArray(function(err, docs) {
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs[0])
-    callback(docs);
-  });
-}
-
-client.connect(function (err) {
-  assert.equal(null, err)
-  console.log("Connected successfully to server")
-
-  const db = client.db('dev-challenge')
-  
-  findDocuments(db, function() {
-    client.close();
-  });
-})
+app.use(cors());
 
 // api port listener
 const port = process.env.PORT || process.env.API_PORT
@@ -42,5 +16,9 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Hello world!')
+  res.send('Hello from API.')
 })
+
+// register controller for titles route
+const titlesRoute = require('./routes/titlesRoute')
+app.use('/api/titles', titlesRoute)
