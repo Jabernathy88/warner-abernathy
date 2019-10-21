@@ -9,18 +9,17 @@ app.use(bodyParser.json())
 app.use(cors());
 
 // React as view engine
-const serveStatic = require("serve-static")
-const path = require('path');
-app.use(serveStatic(path.join(__dirname, '../client/build')))
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '../client/build/index.html')
-})
+app.use(express.static(__dirname + '../client/build/'))
 
 // api port listener
 const port = process.env.PORT || process.env.API_PORT
 
 app.listen(port, () => {
   console.log("Express API server listening on Port:" + port)
+})
+
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '../client/build/index.html')
 })
 
 app.get('/api', (req, res) => {
