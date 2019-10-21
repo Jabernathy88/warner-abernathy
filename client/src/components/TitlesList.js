@@ -2,7 +2,8 @@ import React from 'react'
 
 const TitlesList = () => {
   return (
-    <div>
+    <div className="posts-list-current-user">
+      <h5>Hello from TitlesList</h5>
       
     </div>
   );
